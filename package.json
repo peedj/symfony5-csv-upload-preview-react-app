@@ -19,10 +19,10 @@
     "react-dom": "^17.0.1",
     "react-test-renderer": "^17.0.1",
     "stimulus": "^2.0.0",
-    "webpack-dev-server": "^3.11.2",
     "webpack-notifier": "^1.6.0"
   },
   "dependencies": {
+    "webpack-dev-server": "^3.11.2",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/plugin-transform-runtime": "^7.12.10",
     "@babel/preset-flow": "^7.12.1",
