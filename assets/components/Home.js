@@ -12,7 +12,7 @@ class Home extends Component {
             <div>
                 <Router>
                     <div className="bg-teal-500">
-                        <div class="container mx-auto">
+                        <div className="container mx-auto">
                             <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
                                 <div className="flex items-center flex-shrink-0 text-white mr-6">
                                     <NavLink className="font-semibold text-xl tracking-tight" to={"/"}> CSV File

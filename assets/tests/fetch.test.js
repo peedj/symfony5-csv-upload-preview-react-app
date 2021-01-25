@@ -5,6 +5,7 @@ import {render, unmountComponentAtNode} from "react-dom";
 import {act} from "react-dom/test-utils";
 import CsvList from "../components/CsvList";
 import axios from "axios";
+import { BrowserRouter as Router } from 'react-router-dom';
 
 let container = null;
 beforeEach(() => {
@@ -24,7 +25,7 @@ afterEach(() => {
     }
 });
 
-it("renders user data", async () => {
+it("Renders CSV List Data", async () => {
     const fakeData = {
         data: {
             items: [{
@@ -40,7 +41,7 @@ it("renders user data", async () => {
     );
     // Use the asynchronous version of act to apply resolved promises
     await act(async () => {
-        render(<CsvList id="123"/>, container);
+        render(<Router><CsvList id="123"/></Router>, container);
     });
     expect(container.querySelector("#user-123 .filename").textContent).toBe(fakeData.data.items[0].fileName);
     // remove the mock to ensure tests are completely isolated
