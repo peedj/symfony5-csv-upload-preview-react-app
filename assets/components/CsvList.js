@@ -3,9 +3,12 @@ import {NavLink, MemoryRouter as Router, Route} from 'react-router-dom';
 import axios from 'axios';
 import ReactPaginate from 'react-paginate';
 import moment from 'moment';
-import CsvFileData from "./CsvFileData";
 
 class CsvList extends Component {
+    componentDidMount() {
+        window.document.title = 'List of Uploaded Files';
+    }
+
     constructor() {
         super();
         this.perPage = 10;
@@ -26,8 +29,8 @@ class CsvList extends Component {
         return this.state.atall ? Math.ceil(this.state.atall / this.perPage) : 0;
     }
 
-    formatTimestampAsDate(timestamp) {
-        return moment(timestamp * 1000).format("lll");
+    formatTimestampAsDate(dateString) {
+        return moment(dateString).format("lll");
     }
 
     render() {
@@ -65,8 +68,8 @@ class CsvList extends Component {
                                             <td className={"p-2"}>{item.status}</td>
                                             <td className={"p-4"}>
                                                 <NavLink
-                                                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
-                                                    to={`/view-data-${item.id}`}> View Data</NavLink>
+                                                    className="ml-1 bg-teal-500 hover:bg-teal-400 text-white font-bold py-2 px-4 border-b-4 border-teal-700 hover:border-teal-500 rounded"
+                                                    to={`/view-stats-${item.id}`}> View Stats</NavLink>
                                             </td>
                                         </tr>
                                 )}

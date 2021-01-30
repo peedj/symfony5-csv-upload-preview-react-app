@@ -19,7 +19,9 @@
     "react-dom": "^17.0.1",
     "react-test-renderer": "^17.0.1",
     "stimulus": "^2.0.0",
-    "webpack-notifier": "^1.6.0"
+    "webpack-notifier": "^1.6.0",
+    "devextreme": "^20.1.4",
+    "devextreme-react": "^20.2.5"
   },
   "dependencies": {
     "webpack-dev-server": "^3.11.2",

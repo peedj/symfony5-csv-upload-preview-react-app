@@ -1,0 +1,1 @@
+export const CSV_DELIMITERS = {";": 0, ",": 0, "\t": 0, "|": 0};
